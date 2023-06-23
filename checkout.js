@@ -118,6 +118,17 @@ if(localStorage.SelectItems){
                                         if(checker == true){
                                             alert("GIFT CODE ALREADY USED IN DEVICE! RETURN TO NORMAL!")
                                             location.reload()
+                                        }else{
+                                            GSHList.push(giftcode)
+                                            let GSHLJSONstringify = JSON.stringify(GSHList)
+                                            localStorage.setItem("GSHistory", GSHLJSONstringify)
+                                            htmlE +=  
+                                            `<div class="d-flex justify-content-between">
+                                                <p>Purchase Complete!</p>
+                                            </div>`
+                                            fullBody.innerHTML = htmlE
+                                            alert("Successfully bought :D")
+                                            location.replace("index.html")
                                         }
                                     }
                                     else{
